@@ -43,7 +43,7 @@ Route::delete('/employee/{id}', [EmployeeController::class, 'destroy'])->middlew
 Route::get('/create-employee', [EmployeeController::class, 'create'])->middleware('auth');
 Route::post('/create-employee', [EmployeeController::class, 'store'])->middleware('auth');
 
-Route::get('/menuManagement', [MenuManagementController::class, 'index'])->middleware('auth');
+Route::get('/menu-service', [MenuManagementController::class, 'index'])->middleware('auth');
 Route::delete('/menu-delete/{id}', [MenuManagementController::class, 'destroy'])->middleware('auth');
 
 Route::resource('/userManagement', UsersManagementController::class)->middleware('auth');
